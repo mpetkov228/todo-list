@@ -24,7 +24,7 @@ header img {
 }
 
 header div {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
     color: white;
     margin-top: 2px;
@@ -41,6 +41,29 @@ ul {
 
 .todo-menu {
     background-color: rgb(238, 238, 238);
+    padding: 20px 35px;
+}
+
+.todo-menu div h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.todo-menu ul li {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 15px;
+}
+
+li img {
+    width: 20px;
+    padding-bottom: 2px;
+}
+
+.projects {
+    margin-top: 20px;
 }
 
 .todo-inbox {
