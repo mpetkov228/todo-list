@@ -19,14 +19,32 @@ header {
 }
 
 header img {
-    width: 1.6rem;
+    width: 1.8rem;
+    margin-left: 10px;
 }
 
 header div {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: white;
     margin-top: 2px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.todo-menu {
+    background-color: rgb(238, 238, 238);
+}
+
+.todo-inbox {
+    flex: 1;
 }
 
 footer {
