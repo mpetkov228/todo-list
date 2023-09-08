@@ -5,6 +5,12 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 header {
     background-color: rgb(88, 166, 255);
     padding: 10px;
@@ -21,4 +27,12 @@ header div {
     font-weight: bold;
     color: white;
     margin-top: 2px;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(88, 166, 255);
+    color: white;
 }
