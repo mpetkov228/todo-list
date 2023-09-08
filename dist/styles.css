@@ -55,6 +55,7 @@ ul {
     align-items: center;
     gap: 6px;
     margin-left: 15px;
+    margin-bottom: 10px;
 }
 
 li img {
@@ -68,6 +69,15 @@ li img {
 
 .todo-inbox {
     flex: 1;
+    padding: 20px 60px;
+}
+
+.todo-inbox h1 {
+    font-size: 2.2rem;
+}
+
+.todo-inbox ul {
+    font-size: 1.6rem;
 }
 
 footer {
