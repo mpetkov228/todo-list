@@ -55,8 +55,7 @@ ul {
     align-items: center;
     gap: 6px;
     margin-left: 15px;
-    margin-bottom: 10px;
-    padding: 3px 10px;
+    padding: 6px 14px;
     cursor: pointer;
     border-radius: 5px;
 }
@@ -81,11 +80,26 @@ li img {
 }
 
 .todo-inbox h1 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
 }
 
 .todo-inbox ul {
-    font-size: 1.6rem;
+    font-size: 2rem;
+}
+
+.todo-inbox .todo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.todo p {
+    margin-right: 20px;
+}
+
+.todo button {
+    font-size: 1.2rem;
+    padding: 2px 6px;
 }
 
 footer {
