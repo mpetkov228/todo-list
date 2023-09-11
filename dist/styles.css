@@ -98,8 +98,33 @@ li img {
 }
 
 .todo button {
-    font-size: 1.2rem;
-    padding: 2px 6px;
+    width: 45px;
+    padding-top: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todo button img {
+    width: 25px;
+    padding: 0;
+}
+
+.complete-btn {
+    background-color: rgb(232, 252, 234);
+    border: 2px solid rgb(1, 216, 1);
+}
+
+.remove-btn {
+    background-color: rgb(255, 224, 224);
+    border: 2px solid rgb(255, 79, 79);
+}
+
+.complete-btn:hover {
+    background-color: rgb(215, 255, 219);
+}
+
+.remove-btn:hover {
+    background-color: rgb(255, 204, 204);
 }
 
 footer {
