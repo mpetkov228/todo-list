@@ -19,3 +19,17 @@ const todos = [
     },
 ];
 
+exports.createTodo = (data) => {
+    const todo = {
+        title: data.title,
+        description: data.description,
+        dueDate: data.dueDate,
+        priority: data.priority,
+    };
+
+    todos.push(todo);
+}
+
+exports.readTodos = () => {
+    console.log(todos);
+}
