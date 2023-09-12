@@ -109,6 +109,14 @@ li img {
 
 .todo p {
     margin-right: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.todo p:hover {
+    font-weight: bold;
+    background-color: rgb(238, 238, 238);
 }
 
 .todo button {
