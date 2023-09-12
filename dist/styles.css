@@ -88,6 +88,10 @@ li img {
     flex: 2;
 }
 
+.todo-inbox ul li {
+    margin-top: 5px;
+}
+
 .todo-inbox .todo {
     display: flex;
     gap: 10px;
@@ -99,6 +103,12 @@ li img {
     gap: 50px;
 }
 
+.todo {
+    background-color: rgb(238, 238, 238);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
 .todo-description {
     flex: 1;
 }
@@ -107,16 +117,40 @@ li img {
     margin-bottom: 20px;
 }
 
-.todo p {
+.todo .todo-title {
     margin-right: 20px;
     cursor: pointer;
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-.todo p:hover {
+.todo .todo-title:hover {
     font-weight: bold;
-    background-color: rgb(238, 238, 238);
+}
+
+.todo .todo-priority {
+    margin-left: auto;
+}
+
+.low,
+.medium,
+.high {
+    padding: 3px 7px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+.low {
+    background-color: rgb(2, 170, 2);
+}
+
+.medium {
+    background-color: yellow;
+}
+
+.high {
+    background-color: orange;
 }
 
 .todo button {
@@ -135,7 +169,6 @@ li img {
 .complete-btn {
     background-color: rgb(232, 252, 234);
     border: 2px solid rgb(1, 216, 1);
-    margin-left: auto;
 }
 
 .remove-btn {
