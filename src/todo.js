@@ -28,8 +28,8 @@ exports.createTodo = (data) => {
     };
 
     todos.push(todo);
-}
+};
 
 exports.readTodos = () => {
     console.log(todos);
-}
+};
