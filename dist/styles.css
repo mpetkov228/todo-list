@@ -98,7 +98,7 @@ li img {
     align-items: center;
 }
 
-.todo-list {
+.todo-list-container {
     display: flex;
     gap: 50px;
 }
