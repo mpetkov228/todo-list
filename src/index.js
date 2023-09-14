@@ -1,4 +1,5 @@
 import { createTodo, getTodos } from "./todo";
+import { createElement } from "./utils";
 
 const newProjectBtn = document.querySelector('.new-project-btn');
 const todoList = document.querySelector('.todo-list');
@@ -14,23 +15,6 @@ newProjectBtn.addEventListener('click', () => {
     renderTodos(getTodos());
 });
 
-function createElement(type, options) {
-    const element = document.createElement(type);
-
-    if (options.content) {
-        element.textContent = options.content;
-    }
-
-    if (options.classes) {
-        element.classList.add(...options.classes);
-    }
-
-    if (options.src) {
-        element.src = options.src;
-    }
-
-    return element;
-}
 
 function renderTodos(todos) {
     todoList.replaceChildren();
