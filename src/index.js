@@ -1,10 +1,10 @@
 import { createTodo, getTodos } from "./todo";
 import { createElement } from "./utils";
 
-const newProjectBtn = document.querySelector('.new-project-btn');
+const newTodoBtn = document.querySelector('.new-todo-btn');
 const todoList = document.querySelector('.todo-list');
 
-newProjectBtn.addEventListener('click', () => {
+newTodoBtn.addEventListener('click', () => {
     createTodo({
         title: 'new todo',
         description: 'todo description',
@@ -19,8 +19,10 @@ newProjectBtn.addEventListener('click', () => {
 function renderTodos(todos) {
     todoList.replaceChildren();
 
-    todos.forEach(todo => {
+    todos.forEach((todo, i) => {
         const li = createElement('li', { classes: ['todo']});
+        li.setAttribute('data-index', i);
+        
         const title = createElement('p', { content: todo.title, classes: ['todo-title'] });
         const priority = createElement('p', { content: todo.priority, classes: [todo.priority.toLowerCase(), 'todo-priority'] });
 

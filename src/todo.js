@@ -33,3 +33,7 @@ exports.createTodo = (data) => {
 exports.getTodos = () => {
     return todos;
 };
+
+exports.deleteTodo = () => {
+
+};
