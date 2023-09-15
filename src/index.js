@@ -1,4 +1,4 @@
-import { createTodo, getTodos } from "./todo";
+import { createTodo, getTodos, deleteTodo } from "./todo";
 import { createElement } from "./utils";
 
 const newTodoBtn = document.querySelector('.new-todo-btn');
@@ -22,7 +22,7 @@ function renderTodos(todos) {
     todos.forEach((todo, i) => {
         const li = createElement('li', { classes: ['todo']});
         li.setAttribute('data-index', i);
-        
+
         const title = createElement('p', { content: todo.title, classes: ['todo-title'] });
         const priority = createElement('p', { content: todo.priority, classes: [todo.priority.toLowerCase(), 'todo-priority'] });
 

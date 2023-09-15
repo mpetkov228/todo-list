@@ -34,6 +34,6 @@ exports.getTodos = () => {
     return todos;
 };
 
-exports.deleteTodo = () => {
-
+exports.deleteTodo = (index) => {
+    todos.splice(index, 1);
 };
