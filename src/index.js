@@ -4,6 +4,17 @@ import { createElement } from "./utils";
 const newTodoBtn = document.querySelector('.new-todo-btn');
 const todoList = document.querySelector('.todo-list');
 
+todoList.addEventListener('click', (event) => {
+    if (event.target.className != 'remove-btn') {
+        return;
+    }
+
+    const todo = event.target.parentElement;
+    console.log(todo.getAttribute('data-index'));
+    deleteTodo(todo.getAttribute('data-index'));
+    renderTodos(getTodos());
+});
+
 newTodoBtn.addEventListener('click', () => {
     createTodo({
         title: 'new todo',
@@ -31,7 +42,7 @@ function renderTodos(todos) {
         completeBtn.appendChild(completeBtnImg);
 
         const removeBtn = createElement('button', { classes: ['remove-btn'] });
-        const removeBtnImg = createElement('img', { src: './assets/remove-icon.svg' });
+        const removeBtnImg = createElement('img', { src: './assets/remove-icon.svg', classes: ['remove-img'] });
         removeBtn.appendChild(removeBtnImg);
 
         li.appendChild(title);
