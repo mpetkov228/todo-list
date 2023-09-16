@@ -24,6 +24,7 @@ todoList.addEventListener('click', (event) => {
     const todo = getTodo(todoElement.getAttribute('data-index'));
     todo['complete'] = true;
     todoElement.style.textDecoration = 'line-through';
+    console.log(getTodos());
 });
 
 newTodoBtn.addEventListener('click', () => {
