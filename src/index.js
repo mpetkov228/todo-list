@@ -1,4 +1,4 @@
-import { createTodo, getTodos, deleteTodo } from "./todo";
+import { createTodo, getTodo, getTodos, deleteTodo } from "./todo";
 import { createElement } from "./utils";
 
 const newTodoBtn = document.querySelector('.new-todo-btn');
@@ -9,10 +9,21 @@ todoList.addEventListener('click', (event) => {
         return;
     }
 
-    const todo = event.target.parentElement;
-    console.log(todo.getAttribute('data-index'));
-    deleteTodo(todo.getAttribute('data-index'));
+    const todoElement = event.target.parentElement;
+    console.log(todoElement.getAttribute('data-index'));
+    deleteTodo(todoElement.getAttribute('data-index'));
     renderTodos(getTodos());
+});
+
+todoList.addEventListener('click', (event) => {
+    if (event.target.className != 'complete-btn') {
+        return;
+    }
+
+    const todoElement = event.target.parentElement;
+    const todo = getTodo(todoElement.getAttribute('data-index'));
+    todo['complete'] = true;
+    todoElement.style.textDecoration = 'line-through';
 });
 
 newTodoBtn.addEventListener('click', () => {

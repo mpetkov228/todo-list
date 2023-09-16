@@ -171,6 +171,10 @@ li img {
     border: 2px solid rgb(1, 216, 1);
 }
 
+.complete-btn img {
+    pointer-events: none;
+}
+
 .remove-btn {
     background-color: rgb(255, 224, 224);
     border: 2px solid rgb(255, 79, 79);

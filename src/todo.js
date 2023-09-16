@@ -30,6 +30,10 @@ exports.createTodo = (data) => {
     todos.push(todo);
 };
 
+exports.getTodo = (index) => {
+    return todos[index];
+};
+
 exports.getTodos = () => {
     return todos;
 };
