@@ -3,6 +3,8 @@ import { createElement } from "./utils";
 
 const newTodoBtn = document.querySelector('.new-todo-btn');
 const todoList = document.querySelector('.todo-list');
+const todoInbox = document.querySelector('.todo-inbox');
+const newTodoContainer = document.querySelector('.new-todo-container');
 
 todoList.addEventListener('click', (event) => {
     if (event.target.className != 'remove-btn') {
@@ -28,14 +30,17 @@ todoList.addEventListener('click', (event) => {
 });
 
 newTodoBtn.addEventListener('click', () => {
-    createTodo({
-        title: 'new todo',
-        description: 'todo description',
-        dueDate: 'today',
-        priority: 'low',
-    });
+    // createTodo({
+    //     title: 'new todo',
+    //     description: 'todo description',
+    //     dueDate: 'today',
+    //     priority: 'low',
+    // });
 
-    renderTodos(getTodos());
+    // renderTodos(getTodos());
+
+    newTodoContainer.style.display = 'block';
+    todoInbox.style.display = 'none';
 });
 
 
