@@ -192,6 +192,10 @@ li img {
     background-color: rgb(255, 204, 204);
 }
 
+.new-todo-container {
+    display: none;
+}
+
 footer {
     margin-top: auto;
     text-align: center;
