@@ -5,6 +5,25 @@ const newTodoBtn = document.querySelector('.new-todo-btn');
 const todoList = document.querySelector('.todo-list');
 const todoInbox = document.querySelector('.todo-inbox');
 const newTodoContainer = document.querySelector('.new-todo-container');
+const newTodoForm = document.querySelector('.new-todo-form');
+
+const titleInput = document.querySelector('#title');
+const priorityInput = document.querySelectorAll('.priority input');
+const dueDateInput = document.querySelector('#dueDate');
+const descriptionInput = document.querySelector('#description');
+
+newTodoForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    console.log(titleInput.value);
+    priorityInput.forEach(element => {
+        if (element.checked) {
+            console.log(element.value);
+        }
+    });
+    console.log(dueDateInput.value);
+    console.log(descriptionInput.value);
+});
 
 todoList.addEventListener('click', (event) => {
     if (event.target.className != 'remove-btn') {

@@ -205,7 +205,7 @@ li img {
     text-align: center;
 }
 
-.new-todo-container form {
+.new-todo-form {
     background-color: rgb(238, 238, 238);
     display: flex;
     flex-direction: column;
@@ -215,7 +215,7 @@ li img {
     border-radius: 5px;
 }
 
-.new-todo-container form div {
+.new-todo-form div {
     display: flex;
 }
 
@@ -241,6 +241,10 @@ li img {
 
 .description {
     gap: 10px;
+}
+
+.description textarea {
+    resize: none;
 }
 
 .submit {
