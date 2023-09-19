@@ -40,12 +40,11 @@ function toggleForm() {
     }
 
     if (newTodoContainer.style.display == 'none' || newTodoContainer.style.display == '') {
-        newTodoContainer.style.display = 'block';
+        newTodoContainer.style.display = 'flex';
     } else {
         newTodoContainer.style.display = 'none';
     }
 }
-
 
 function renderTodos(todos) {
     todoList.replaceChildren();

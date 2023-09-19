@@ -75,7 +75,6 @@ li img {
 }
 
 .todo-inbox {
-    display: block;
     flex: 1;
     padding: 20px 60px;
 }
@@ -196,6 +195,63 @@ li img {
 
 .new-todo-container {
     display: none;
+    flex: 1;
+    padding: 20px 60px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-todo-container h1 {
+    text-align: center;
+}
+
+.new-todo-container form {
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    padding: 15px 20px;
+    gap: 15px;
+    border-radius: 5px;
+}
+
+.new-todo-container form div {
+    display: flex;
+}
+
+.title {
+    gap: 95px;
+}
+
+.title input {
+    width: 100%;
+}
+
+.priority fieldset {
+    border: none;
+}
+
+.due-date {
+    gap: 53px;
+}
+
+.due-date input {
+   width: 213px;
+}
+
+.description {
+    gap: 10px;
+}
+
+.submit {
+    align-items: center;
+    justify-content: center;
+}
+
+.submit button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px 12px;
 }
 
 footer {
