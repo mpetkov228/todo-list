@@ -29,19 +29,22 @@ todoList.addEventListener('click', (event) => {
     console.log(getTodos());
 });
 
-newTodoBtn.addEventListener('click', () => {
-    // createTodo({
-    //     title: 'new todo',
-    //     description: 'todo description',
-    //     dueDate: 'today',
-    //     priority: 'low',
-    // });
 
-    // renderTodos(getTodos());
+newTodoBtn.addEventListener('click', toggleForm);
 
-    newTodoContainer.style.display = 'block';
-    todoInbox.style.display = 'none';
-});
+function toggleForm() {
+    if (todoInbox.style.display == 'block' || todoInbox.style.display == '') {
+        todoInbox.style.display = 'none';
+    } else {
+        todoInbox.style.display = 'block';
+    }
+
+    if (newTodoContainer.style.display == 'none' || newTodoContainer.style.display == '') {
+        newTodoContainer.style.display = 'block';
+    } else {
+        newTodoContainer.style.display = 'none';
+    }
+}
 
 
 function renderTodos(todos) {
