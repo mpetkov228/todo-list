@@ -12,6 +12,8 @@ const priorityInput = document.querySelectorAll('.priority input');
 const dueDateInput = document.querySelector('#dueDate');
 const descriptionInput = document.querySelector('#description');
 
+const descriptionParagraph = document.querySelector('.description-text');
+
 newTodoForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -54,6 +56,16 @@ todoList.addEventListener('click', (event) => {
     console.log(getTodos());
 });
 
+todoList.addEventListener('click', (event) => {
+    if (event.target.className != 'todo-title') {
+        return;
+    }
+
+    const todoElement = event.target.parentElement;
+    const todo = getTodo(todoElement.getAttribute('data-index'));
+    
+    descriptionParagraph.textContent = todo.description;
+});
 
 newTodoBtn.addEventListener('click', toggleForm);
 
