@@ -1,6 +1,7 @@
 import { createTodo, getTodo, getTodos, deleteTodo } from "./todo";
 import { createElement } from "./utils";
 
+const inboxBtn = document.querySelector('.inbox-btn');
 const newTodoBtn = document.querySelector('.new-todo-btn');
 const todoList = document.querySelector('.todo-list');
 const todoInbox = document.querySelector('.todo-inbox');
@@ -13,6 +14,8 @@ const dueDateInput = document.querySelector('#dueDate');
 const descriptionInput = document.querySelector('#description');
 
 const descriptionParagraph = document.querySelector('.description-text');
+
+inboxBtn.addEventListener('click', toggleForm);
 
 newTodoForm.addEventListener('submit', (event) => {
     event.preventDefault();
