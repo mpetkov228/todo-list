@@ -29,6 +29,8 @@ newTodoForm.addEventListener('submit', (event) => {
 
     createTodo({ title, priority, dueDate, description });
 
+    event.target.reset();
+
     toggleForm();
     renderTodos(getTodos());
 });
