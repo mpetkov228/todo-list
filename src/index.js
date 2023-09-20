@@ -15,14 +15,20 @@ const descriptionInput = document.querySelector('#description');
 newTodoForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    console.log(titleInput.value);
+    const title = titleInput.value;
+    let priority;
     priorityInput.forEach(element => {
         if (element.checked) {
-            console.log(element.value);
+            priority = element.value;
         }
     });
-    console.log(dueDateInput.value);
-    console.log(descriptionInput.value);
+    const dueDate = new Date(dueDateInput.value);
+    const description = descriptionInput.value;
+
+    createTodo({ title, priority, dueDate, description });
+
+    toggleForm();
+    renderTodos(getTodos());
 });
 
 todoList.addEventListener('click', (event) => {
